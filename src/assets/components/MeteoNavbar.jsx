@@ -1,4 +1,5 @@
 import { Container, Navbar, NavDropdown } from "react-bootstrap";
+import { Link } from "react-router";
 
 const MeteoNavbar = () => {
   return (
@@ -13,9 +14,15 @@ const MeteoNavbar = () => {
             id="basic-nav-dropdown"
             className="text-white fs-3 fw-bold"
           >
-            <NavDropdown.Item href="#action/3.1">Nord</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Centro</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Sud</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="nord">
+              Nord
+            </NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="centro">
+              Centro
+            </NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="sud">
+              Sud
+            </NavDropdown.Item>
           </NavDropdown>
         </Container>
       </Navbar>
